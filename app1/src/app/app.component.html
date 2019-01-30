@@ -1,0 +1,7 @@
+<!-- aguarda o "escondeBanner" emitir o valor para invocar o metodo ctrlBanner 
+    passando o valor emitido
+ -->
+<app-header (escondeBanner)="ctrlBanner($event)"></app-header>
+
+<!-- Diretiva ngIf que exibie o banner de acordo com o valor de exibiBanner -->
+<app-banner *ngIf="exibiBanner==true"></app-banner>
