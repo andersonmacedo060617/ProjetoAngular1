@@ -11,7 +11,13 @@ export class GeoLocalizacaoService{
     constructor(public http: HttpClient){}
 
     public getAllContinentes(): Promise<any>{
-       return this.http.get<any>(`http://www.geonames.org/childrenJSON?geonameId=${this.GeoNameId.Continente}`)
+       return this.http.get<any>(`http://www.geonames.org/childrenJSON?lang=pt&geonameId=${this.GeoNameId.Continente}`)
+        .toPromise()
+        .then((resposta: any)=>resposta)
+    }
+
+    public getAllPaises(geoNameIdContinente: number): Promise<any>{
+        return this.http.get<any>(`http://www.geonames.org/childrenJSON?lang=pt&geonameId=${geoNameIdContinente}`)
         .toPromise()
         .then((resposta: any)=>resposta)
     }

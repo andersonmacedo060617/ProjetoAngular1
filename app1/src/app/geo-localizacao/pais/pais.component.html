@@ -1,0 +1,14 @@
+<p><a routerLink="/GeoLocalizacao/continentes">Voltar</a></p>
+<p>
+  Total de Paises: {{totalPaises}}
+</p>
+<table border="1">
+  <tr>
+    <th>Codigo Geo Name</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let pais of paises">
+    <td>{{pais.geonameId}}</td>
+    <td>{{pais.name}}</td>
+  </tr>
+</table>

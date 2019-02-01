@@ -9,13 +9,17 @@ import { GeoLocalizacaoComponent } from './geo-localizacao/geo-localizacao.compo
 import {HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ContinenteComponent } from './geo-localizacao/continente/continente.component';
+import { PaisComponent } from './geo-localizacao/pais/pais.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
     HeaderComponent,
-    GeoLocalizacaoComponent
+    GeoLocalizacaoComponent,
+    ContinenteComponent,
+    PaisComponent
   ],
   imports: [
     BrowserModule,    

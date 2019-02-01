@@ -1,0 +1,17 @@
+<p>
+  Total de continentes: {{totalContinentes}}
+</p>
+<table border="1">
+  <tr>
+    <th>Codigo Geo Name</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let cont of continentes">
+    <td>
+      <a [routerLink]= "['/GeoLocalizacao/paises/', cont.geonameId]">
+        {{cont.geonameId}}
+      </a>
+    </td>
+    <td>{{cont.name}}</td>
+  </tr>
+</table>
